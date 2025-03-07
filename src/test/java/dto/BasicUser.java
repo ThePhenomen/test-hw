@@ -8,6 +8,15 @@ import lombok.Data;
 public class BasicUser {
 
     String login;
+
+    public String getLogin() {
+        return login;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
     String password;
 
 }

@@ -6,6 +6,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.NoAlertPresentException;
+import org.testng.annotations.Test;
+import tests.BasicTest;
+
 
 @Log4j2
 public class LoginPage {
@@ -46,7 +49,7 @@ public class LoginPage {
         try {
             Alert alert = driver.switchTo().alert();
             String alertText = alert.getText();
-            log.info("Alert text: " + alertText);
+            log.info(alertText);
             alert.accept(); // Принимаем alert (нажимаем OK)
         } catch (NoAlertPresentException e) {
             // Если alert не появился, продолжаем выполнение
@@ -54,6 +57,5 @@ public class LoginPage {
         }
 
         return this;
-    }
     }
 }
