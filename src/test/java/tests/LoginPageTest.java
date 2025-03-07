@@ -1,3 +1,5 @@
+package tests;
+
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 import org.openqa.selenium.By;
