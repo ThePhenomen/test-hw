@@ -8,6 +8,10 @@ import lombok.Data;
 public class BasicUser {
 
     String login;
+    String password;
+    String creditCard;
+
+    public String getCreditCard() { return creditCard; }
 
     public String getLogin() {
         return login;
@@ -16,7 +20,5 @@ public class BasicUser {
     public String getPassword() {
         return password;
     }
-
-    String password;
 
 }
