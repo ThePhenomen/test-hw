@@ -15,6 +15,7 @@ public class CartPage {
     private static final By CARD_FIELD = By.id("card");
     private static final By OK_BUTTON = By.cssSelector("button.btn.btn-primary[onclick='purchaseOrder()']");
     private static final By SUCCES_BUTTON = By.xpath("//button[text()='OK']");
+
     public CartPage(WebDriver driver) {
         this.driver = driver;
     }

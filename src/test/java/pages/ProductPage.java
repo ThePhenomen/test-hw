@@ -26,11 +26,13 @@ public class ProductPage {
     public ProductPage addToCart() {
         log.info("Adding product to shopping cart");
         driver.findElement(ADD_BUTTON).click();
+
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         Alert alert = wait.until(ExpectedConditions.alertIsPresent());
         String alertText = alert.getText();
         log.info(alertText);
         alert.accept();
+
         return this;
     }
 

@@ -33,6 +33,7 @@ public class LoginPage {
     public LoginPage open() {
         log.info("Opening initial page");
         driver.get(this.url);
+
         return this;
     }
 
@@ -40,6 +41,7 @@ public class LoginPage {
     public LoginPage openLogin() {
         log.info("Opening login page");
         driver.findElement(LOGIN_PAGE).click();
+
         return this;
     }
 
@@ -76,7 +78,6 @@ public class LoginPage {
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         By linkLocator = By.xpath(String.format("//a[@href='prod.html?idp_=%s']", elemCounter));
-
         WebElement link = wait.until(ExpectedConditions.elementToBeClickable(linkLocator));
         link.click();
 
